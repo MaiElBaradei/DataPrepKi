@@ -196,9 +196,6 @@ def median(
     numeric_onlybool, default False
     Include only float, int, boolean columns. Not implemented for Series.
 
-    **kwargs
-    Additional keyword arguments to be passed to the function.
-
     Returns:
     Series or scalar
     """

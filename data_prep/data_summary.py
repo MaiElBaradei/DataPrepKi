@@ -3,7 +3,7 @@ from typing import Union
 
 
 def summary(
-    data: pd.Dataframe,
+    data: pd.DataFrame,
     percent: list = None,
     including: {"all", list, None} = None,
     excluding: {list, None} = None,
@@ -74,7 +74,7 @@ def count(axis: {0, 1} = 0, numeric_only: bool = False) -> pd.Series:
 
 
 def max(
-    data: pd.Dataframe,
+    data: pd.DataFrame,
     axis: {0, 1} = 0,
     skipna: bool = True,
     numeric_only: bool = False,
@@ -108,7 +108,7 @@ def max(
 
 
 def min(
-    data: pd.Dataframe,
+    data: pd.DataFrame,
     axis: {0, 1} = 0,
     skipna: bool = True,
     numeric_only: bool = False,
@@ -142,7 +142,7 @@ def min(
 
 
 def mean(
-    data: pd.Dataframe,
+    data: pd.DataFrame,
     axis: {0, 1} = 0,
     skipna: bool = True,
     numeric_only: bool = False,
@@ -174,7 +174,7 @@ def mean(
 
 
 def median(
-    data: pd.Dataframe,
+    data: pd.DataFrame,
     axis: {0, 1} = 0,
     skipna: bool = True,
     numeric_only: bool = False,
@@ -206,7 +206,7 @@ def median(
 
 
 def mode(
-    data: pd.Dataframe,
+    data: pd.DataFrame,
     axis: {0, 1} = 0,
     numeric_only: bool = False,
     dropna: bool = True,

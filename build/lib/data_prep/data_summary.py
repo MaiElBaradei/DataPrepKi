@@ -3,7 +3,7 @@ from typing import Union
 
 
 def summary(
-    data: pd.DataFrame,
+    data: pd.Dataframe,
     percent: list = None,
     including: {"all", list, None} = None,
     excluding: {list, None} = None,
@@ -74,7 +74,7 @@ def count(axis: {0, 1} = 0, numeric_only: bool = False) -> pd.Series:
 
 
 def max(
-    data: pd.DataFrame,
+    data: pd.Dataframe,
     axis: {0, 1} = 0,
     skipna: bool = True,
     numeric_only: bool = False,
@@ -108,7 +108,7 @@ def max(
 
 
 def min(
-    data: pd.DataFrame,
+    data: pd.Dataframe,
     axis: {0, 1} = 0,
     skipna: bool = True,
     numeric_only: bool = False,
@@ -142,7 +142,7 @@ def min(
 
 
 def mean(
-    data: pd.DataFrame,
+    data: pd.Dataframe,
     axis: {0, 1} = 0,
     skipna: bool = True,
     numeric_only: bool = False,
@@ -174,7 +174,7 @@ def mean(
 
 
 def median(
-    data: pd.DataFrame,
+    data: pd.Dataframe,
     axis: {0, 1} = 0,
     skipna: bool = True,
     numeric_only: bool = False,
@@ -206,11 +206,11 @@ def median(
 
 
 def mode(
-    data: pd.DataFrame,
+    data: pd.Dataframe,
     axis: {0, 1} = 0,
     numeric_only: bool = False,
     dropna: bool = True,
-) -> pd.DataFrame:
+) -> pd.DataFrameF:
     """
     Get the mode(s) of each element along the selected axis.
 

@@ -3,7 +3,7 @@ from typing import Union
 
 
 def remove_missing(
-    data: pd.DataFrame,
+    data: pd.Dataframe,
     axis: {0, 1} = 0,
     how: {"all", "any"} = "any",
     subset: list = None,

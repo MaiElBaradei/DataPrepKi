@@ -2,7 +2,7 @@ import pandas as pd
 from typing import Union
 
 
-def from_csv(path: str) -> Union[pd.DataFrame, None]:
+def from_csv(path: str) -> Union[pd.Dataframe, None]:
     """
     Read a comma-separated values (csv) file into DataFrame.
 
@@ -24,7 +24,7 @@ def from_csv(path: str) -> Union[pd.DataFrame, None]:
         print(f"Error reading CSV file: {e}")
 
 
-def from_excel(path: str) -> Union[pd.DataFrame, None]:
+def from_excel(path: str) -> Union[pd.Dataframe, None]:
     """
     Read an Excel file into a pandas DataFrame.
 
@@ -45,7 +45,7 @@ def from_excel(path: str) -> Union[pd.DataFrame, None]:
         print(f"Error reading Excel file: {e}")
 
 
-def from_json(path: str) -> Union[pd.DataFrame, None]:
+def from_json(path: str) -> Union[pd.Dataframe, None]:
     """
     Convert a JSON string to pandas object.
 

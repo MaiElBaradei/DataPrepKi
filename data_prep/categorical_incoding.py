@@ -10,7 +10,7 @@ def one_hot_encoding(data: pd.DataFrame, columns: list = None) -> pd.DataFrame:
     Parameters:
     data:
     array-like, Series, or DataFrame
-    Data of which to one hot incoding.
+    Data of which to one hot encoding.
     columns:
     list-like, default None
     Column names in the DataFrame to be encoded. If columns is None then all the columns with object, string, or category dtype will be converted.

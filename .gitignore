@@ -1,1 +1,16 @@
 .env
+testing.py
+data_prep/__pycache__/__init__.cpython-310.pyc
+data_prep/__pycache__/data_summary.cpython-310.pyc
+DataPrepKit.egg-info/dependency_links.txt
+DataPrepKit.egg-info/PKG-INFO
+DataPrepKit.egg-info/requires.txt
+DataPrepKit.egg-info/SOURCES.txt
+DataPrepKit.egg-info/top_level.txt
+dist/DataPrepKit-1.0-py3-none-any.whl
+dist/DataPrepKit-1.0.tar.gz
+dist/DataPrepKit-1.1.tar.gz
+dist/DataPrepKit-1.1-py3-none-any.whl
+dist/DataPrepKit-1.0-py3-none-any.whl
+winemag-data-130k-v2.csv
+dist/DataPrepKit-1.0-py3-none-any.whl

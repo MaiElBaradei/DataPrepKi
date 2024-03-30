@@ -4,9 +4,9 @@ from typing import Union
 
 def summary(
     data: pd.DataFrame,
-    percent: list = None,
-    including: {"all", list, None} = None,
-    excluding: {list, None} = None,
+    percentile: list = None,
+    include: {"all", list, None} = None,
+    exclude: {list, None} = None,
 ) -> None:
     """
     Generate descriptive statistics.
@@ -43,12 +43,14 @@ def summary(
     Summary statistics of the Series or Dataframe provided.
     """
     try:
-        return data.describe(percentiles=percent, include=including, exclude=excludig)
-    except ExceptionType as e:
+        return data.describe(percentiles=percentile, include=include, exclude=exclude)
+    except Exception as e:
         print(f"Error reading data: {e}")
 
 
-def count(axis: {0, 1} = 0, numeric_only: bool = False) -> pd.Series:
+def count(
+    data: pd.DataFrame, axis: {0, 1} = 0, numeric_only: bool = False
+) -> pd.Series:
     """
     Count non-NA cells for each column or row.
 
@@ -68,76 +70,8 @@ def count(axis: {0, 1} = 0, numeric_only: bool = False) -> pd.Series:
     For each column/row the number of non-NA/null entries.
     """
     try:
-        return pd.count(axis=axis, numeric_only=numeric_only)
-    except ExceptionType as e:
-        print(f"Error reading data: {e}")
-
-
-def max(
-    data: pd.DataFrame,
-    axis: {0, 1} = 0,
-    skipna: bool = True,
-    numeric_only: bool = False,
-) -> Union[pd.Series, pd.scalar]:
-    """
-    Return the maximum of the values over the requested axis.
-
-    If you want the index of the maximum, use idxmax. This is the equivalent of the numpy.ndarray method argmax.
-
-    Parameters:
-    axis{index (0), columns (1)}
-    Axis for the function to be applied on. For Series this parameter is unused and defaults to 0.
-
-    For DataFrames, specifying axis=None will apply the aggregation across both axes.
-
-    New in version 2.0.0.
-
-    skipnabool, default True
-    Exclude NA/null values when computing the result.
-
-    numeric_onlybool, default False
-    Include only float, int, boolean columns. Not implemented for Series.
-
-    Returns:
-    Series or scalar
-    """
-    try:
-        return data.max(axis=axis, skipna=skipna, numeric_only=numeric_only)
-    except ExceptionType as e:
-        print(f"Error reading data: {e}")
-
-
-def min(
-    data: pd.DataFrame,
-    axis: {0, 1} = 0,
-    skipna: bool = True,
-    numeric_only: bool = False,
-) -> Union[pd.Series, pd.scalar]:
-    """
-    Return the minimum of the values over the requested axis.
-
-    If you want the index of the minimum, use idxmin. This is the equivalent of the numpy.ndarray method argmin.
-
-    Parameters:
-    axis{index (0), columns (1)}
-    Axis for the function to be applied on. For Series this parameter is unused and defaults to 0.
-
-    For DataFrames, specifying axis=None will apply the aggregation across both axes.
-
-    New in version 2.0.0.
-
-    skipnabool, default True
-    Exclude NA/null values when computing the result.
-
-    numeric_onlybool, default False
-    Include only float, int, boolean columns. Not implemented for Series.
-
-    Returns:
-    Series or scalar
-    """
-    try:
-        return data.min(axis=axis, skipna=skipna, numeric_only=numeric_only)
-    except ExceptionType as e:
+        return data.count(axis=axis, numeric_only=numeric_only)
+    except Exception as e:
         print(f"Error reading data: {e}")
 
 
@@ -146,7 +80,7 @@ def mean(
     axis: {0, 1} = 0,
     skipna: bool = True,
     numeric_only: bool = False,
-) -> Union[pd.Series, pd.scalar]:
+) -> Union[pd.Series, int, float]:
     """
     Return the mean of the values over the requested axis.
 
@@ -169,7 +103,7 @@ def mean(
     """
     try:
         return data.mean(axis=axis, skipna=skipna, numeric_only=numeric_only)
-    except ExceptionType as e:
+    except Exception as e:
         print(f"Error reading data: {e}")
 
 
@@ -178,7 +112,7 @@ def median(
     axis: {0, 1} = 0,
     skipna: bool = True,
     numeric_only: bool = False,
-) -> Union[pd.Series, pd.scalar]:
+) -> Union[pd.Series, int, float]:
     """
     Return the median of the values over the requested axis.
 
@@ -201,7 +135,7 @@ def median(
     """
     try:
         return data.median(axis=axis, skipna=skipna, numeric_only=numeric_only)
-    except ExceptionType as e:
+    except Exception as e:
         print(f"Error reading data: {e}")
 
 
@@ -241,5 +175,5 @@ def mode(
     """
     try:
         return data.mode(axis=axis, numeric_only=numeric_only, dropna=dropna)
-    except ExceptionType as e:
+    except Exception as e:
         print(f"Error reading data: {e}")

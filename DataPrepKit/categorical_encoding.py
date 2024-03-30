@@ -21,7 +21,7 @@ def one_hot_encoding(data: pd.DataFrame, columns: list = None) -> pd.DataFrame:
     """
     try:
         return pd.get_dummies(data, columns=columns)
-    except ExceptionType as e:
+    except Exception as e:
         print(f"Error reading data: {e}")
 
 
@@ -41,5 +41,5 @@ def label_encoding(data: pd.DataFrame, columns: list = None) -> pd.DataFrame:
     """
     data[column] = data[column].astype("category").cat.codes
     try: return data
-    except ExceptionType as e:
+    except Exception as e:
         print(f"Error reading data: {e}")

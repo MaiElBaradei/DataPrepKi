@@ -46,7 +46,7 @@ def remove_missing(
             inplace=inplace,
             ignore_index=ignore_index,
         )
-    except ExceptionType as e:
+    except Exception as e:
         print(f"Error reading data: {e}")
 
 

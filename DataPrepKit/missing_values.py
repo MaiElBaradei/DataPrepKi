@@ -53,7 +53,7 @@ def remove_missing(
 def impute_missing(
     data: pd.DataFrame,
     strategy: {"mean", "median", "value"},
-    value: {pd.scalar, dict, pd.Series, pd.DataFrame} = None,
+    value: {int, float, str, dict, pd.Series, pd.DataFrame} = None,
     axis: {0, 1} = 0,
     inplace: bool = False,
 ) -> Union[pd.DataFrame, pd.Series, None]:

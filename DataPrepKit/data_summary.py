@@ -7,7 +7,7 @@ def summary(
     percentile: list = None,
     include: {"all", list, None} = None,
     exclude: {list, None} = None,
-) -> None:
+) -> Union[pd.Series,pd.DataFrame]:
     """
     Generate descriptive statistics.
 

@@ -44,7 +44,6 @@ def remove_missing(
             how=how,
             subset=subset,
             inplace=inplace,
-            ignore_index=ignore_index,
         )
     except Exception as e:
         print(f"Error reading data: {e}")

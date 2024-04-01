@@ -22,24 +22,32 @@ def one_hot_encoding(data: pd.DataFrame, columns: list = None) -> pd.DataFrame:
     try:
         return pd.get_dummies(data, columns=columns)
     except Exception as e:
-        print(f"Error reading data: {e}")
+        print(f"Error: {e}")
 
 
 def label_encoding(data: pd.DataFrame, columns: list = None) -> pd.DataFrame:
     """
     Performs label encoding on categorical columns of a Pandas DataFrame.
-    
+
     Parameters:
     data: a DataFrame
     Data of which to get the label encoding.
     columns:
-    list-like, default None (optional) 
+    list-like, default None (optional)
     is a list of column names to encode. If not provided (None by default), the function will encode all categorical columns in the DataFrame.
-    
+
     Returns:
     a Pandas DataFrame after performing label encoding.
     """
-    data[column] = data[column].astype("category").cat.codes
-    try: return data
+    if columns is None:
+        categorical_cols = data.select_dtypes(include=["object", "category"]).columns
+    else:
+        categorical_cols = columns
+
+    for col in categorical_cols:
+        data[col] = data[col].astype("category").cat.codes
+
+    try:
+        return data
     except Exception as e:
-        print(f"Error reading data: {e}")
+        print(f"Error: {e}")

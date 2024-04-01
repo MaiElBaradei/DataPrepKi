@@ -46,7 +46,7 @@ def remove_missing(
             inplace=inplace,
         )
     except Exception as e:
-        print(f"Error reading data: {e}")
+        print(f"Error: {e}")
 
 
 def impute_missing(

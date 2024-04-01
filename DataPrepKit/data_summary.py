@@ -45,7 +45,7 @@ def summary(
     try:
         return data.describe(percentiles=percentile, include=include, exclude=exclude)
     except Exception as e:
-        print(f"Error reading data: {e}")
+        print(f"Error: {e}")
 
 
 def count(
@@ -72,7 +72,7 @@ def count(
     try:
         return data.count(axis=axis, numeric_only=numeric_only)
     except Exception as e:
-        print(f"Error reading data: {e}")
+        print(f"Error: {e}")
 
 
 def mean(
@@ -104,7 +104,7 @@ def mean(
     try:
         return data.mean(axis=axis, skipna=skipna, numeric_only=numeric_only)
     except Exception as e:
-        print(f"Error reading data: {e}")
+        print(f"Error: {e}")
 
 
 def median(
@@ -136,7 +136,7 @@ def median(
     try:
         return data.median(axis=axis, skipna=skipna, numeric_only=numeric_only)
     except Exception as e:
-        print(f"Error reading data: {e}")
+        print(f"Error: {e}")
 
 
 def mode(
@@ -176,4 +176,4 @@ def mode(
     try:
         return data.mode(axis=axis, numeric_only=numeric_only, dropna=dropna)
     except Exception as e:
-        print(f"Error reading data: {e}")
+        print(f"Error: {e}")

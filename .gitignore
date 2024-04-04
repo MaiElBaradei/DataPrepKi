@@ -1,7 +1,5 @@
 .env
-testing.py
-data_prep/__pycache__/__init__.cpython-310.pyc
-data_prep/__pycache__/data_summary.cpython-310.pyc
+testing.p
 DataPrepKitV2.egg-info/dependency_links.txt
 DataPrepKitV2.egg-info/PKG-INFO
 DataPrepKitV2.egg-info/requires.txt
@@ -17,3 +15,7 @@ dist/DataPrepKitV2-1.0-py3-none-any.whl
 DataPrepKitV2/test.ipynb
 DataPrepKitV2/winemag-data-130k-v2.xlsx
 DataPrepKitV2/iris.json
+build
+DataPrepKitV2.egg-info
+dist
+setup.py
